@@ -10,6 +10,7 @@ class App extends Component {
   state = {
     score: 0,
     topScore: 0,
+    message: "Press any picture to test your memory",
     gifs
   }
 
@@ -53,6 +54,7 @@ class App extends Component {
     if(this.clickCheck(id)){
       this.setState({
         score:0,
+        message: "Nope, you already clicked that one! Game Over! Try again..."
       });
       this.state.gifs.map(gif => {
         gif.clicked = false
@@ -67,6 +69,7 @@ class App extends Component {
       this.setState({
         topScore: this.state.score +1 > this.state.topScore ? this.state.score +1 : this.state.topScore,
         score: this.state.score + 1,
+        message: "Good one!",
         gifs: this.shuffle(gifs)
       })
     }
@@ -77,6 +80,7 @@ class App extends Component {
         <Score 
         score={this.state.score}
         topScore={this.state.topScore}
+        message={this.state.message}
         />
         <div className= "row">
           <div className="imageDiv">

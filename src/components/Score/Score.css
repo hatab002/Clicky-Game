@@ -5,7 +5,12 @@
     font-family: cursive;
     font-size: 25px;
 }
-
+#msg{
+    color: #777;
+    font-family: cursive;
+    font-size: 25px;
+    font-weight: bold
+}
 .navbar-brand{
 font-family: cursive;
 font-size: 40px;

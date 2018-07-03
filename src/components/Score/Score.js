@@ -9,6 +9,9 @@ const Score = props => (
                 Score <span className="badge">{props.score}</span> | Top Score <span className="badge">{props.topScore}</span>
             </span>
         </div>
+        <div>
+        <span id="msg">{props.message}</span>  
+        </div>
     </nav>
 )
 
