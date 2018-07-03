@@ -1,0 +1,12 @@
+.giffy {
+    height: 200px;
+    margin: 20px;
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+    border-color: black;
+    padding: 0px;
+    border-radius: 10px;
+}
