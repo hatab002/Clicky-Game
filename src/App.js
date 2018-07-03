@@ -52,10 +52,11 @@ class App extends Component {
   clickingGif = id => {
     if(this.clickCheck(id)){
       this.setState({
-        score:0
-        
+        score:0,
       });
-      
+      this.state.gifs.map(gif => {
+        gif.clicked = false
+      })
     } else{
       const gifs = this.state.gifs.map(gif => {
         if (gif.id === id){
